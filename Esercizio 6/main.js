@@ -8,6 +8,7 @@ e assicurati che la funzione non tenga conto delle maiuscole e minuscole.
 
 const removeShortWords = (array, minLength) => {
     const filteredArray = array.filter(elem => elem.length > minLength);
+    return filteredArray;
 }
 
 const testArray = ["ciao", "benvenuto", "vattene", "supercalifragile", "mannaggia"];
