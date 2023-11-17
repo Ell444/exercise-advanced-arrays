@@ -3,9 +3,11 @@ e stampa in console ogni elemento utilizzando il metodo .forEach().*/
 
 const list = ["fragole", "lamponi", "more", "ciliegie"];
 
-const logElements = (elem, i, array) => {
-    array[i] = elem;
-}
-list.forEach(logElements);
-console.log(list);
+const logElements = (array) => {
+    array.forEach((elem) => {
+        console.log(elem);
+    })
+};
+
+logElements(list);
 

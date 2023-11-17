@@ -2,15 +2,19 @@
 Se l'analisi fallisce, la funzione dovrebbe restituire null invece di generare un errore.
 Inoltre, la funzione dovrebbe stampare in console se l'analisi è stata un successo o meno.*/ 
 
-const jsonString = `["fragole", "more", "lamponi", "mirtilli"]`;
 
-const safeParseJSON = (jsonString) => {
-    try {
-        const analizedJson = JSON.parse(jsonString);
-        console.log(`Brava, cretina.`, analizedJson);
-        return analizedJson;
+const safeParseJSON = (stringa) => {
+  try{
+        const obj = JSON.parse(stringa);
+        console.log('Analisi riuscita');
+        return obj;
     }catch(error){
-        console.error(`Meno brava, cretina`, error.message)
-        return null;
-    };
+        console.error('Analisi non riuscita')
+        return null; 
+   }
 }
+
+const jsonString = `["fragole", "more", "lamponi", "mirtilli"]`;
+const result = safeParseJSON(jsonString);
+console.log (result);
+
